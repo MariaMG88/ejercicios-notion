@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Ejercicio 2.2</title>
+</head>
+
+    
+<body>
+    
+    <div class="container">
+        <div>
+            <img src="images/mono.JPG" alt="logo">
+        </div>
+
+
+
+        <div class="formulario">
+                <form method="post" action="https://reqres.in/api/users" autocomplete="off"> 
+                      <!--autocomplete off: es para que no se cargen los datos automaticamente-->
+                     <!--action: aquí se pone la url de mi API, esta es para post, y esta para get: "https://reqres.in/api/users?page=2"-->
+                     <!--method: puede ser post o get. Post: para datos sensibles como contraseñas, DNI, cosas privadas.Te devuelve un documento json al dar a enviar. Get: Le pides a la API que te de información, y ésta se vuelca en la barra de navegación, hasta la contraseña. No usar si hay datos sensibles ya que serán visibles. -->
+                    
+                <div class="texto1"> 
+                    <h1>Welcome to Mailchimp</h1>
+                    <legend>Find your people. Engage your customers. Build your brand. Do it all with Mailchimp's Marketing Plataform. Already have an account? <a href="">Log in</a></legend>
+                </div>
+            
+
+                <label for="email"><span class="bold">Email</span></label>  <!--Pattern: Atributo para input. Es un patrón para que la contraseña o email no sea válida hasta que el patrón se cumpla. Buscar en google, hay muchos patrones. Entre [] el patrón y entre {} el mínimo y máximo de caracteres. Si pones este atributo se borra minlength y maxlength-->
+                <input id="email" type="email" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{8,10}/>
+                
+                <label for="user_name"><span class="bold">Username</span></label>
+                <input id="user" type="text" name="user_name" required /> <!--required: solo se pone en inputs, atributo para validación, si no no envía el formulario, sale mensaje-->
+            
+
+                <label for="pwd"><span class="bold">Password</span></label>
+                <input
+                    
+                    id="pwd"
+                    type="password"
+                    name="user_pwd"
+                    pattern="[A-Za-z0-9!?-]{8,10}"
+                />
+                
+                <!--minlength y maxlength, son atributos para hacer validación requerida, contraseña mínimo de 4 y máximo de 10 caracteres. Si no, sale un mensaje al enviar, no te deja enviar-->
+                <!--Solo para inputs el sistema de validación-->
+                <!--Pattern: Atributo para input. Es un patrón para que la contraseña o email no sea válida hasta que el patrón se cumpla. Buscar en google, hay muchos patrones. Entre [] el patrón y entre {} el mínimo y máximo de caracteres. Si pones este atributo se borra minlength y maxlength-->
+                
+                <div class="list">
+                    <ul>
+                        <li><span>One lowercase character</span></li>
+                        <li><span>One uppercase character</span></li>
+                        <li><span>One mumber</span></li>
+                    </ul>
+                    <ul id="space">
+                        <li><span>One special character</span></li>
+                        <li><span>8 characters minimum</span></li>
+                    </ul>
+                </div>
+
+                <div class="valid">
+                    <button class="boton"type="submit">Sign Up</button>
+                    <input class="square" id="vip" type="checkbox" name="vip_select" />
+                    <label for="vip">I don't want to receive emails about new Mailchimp products, best practices, or special offers.</label>
+                    
+                </div>
+                
+                <p>By clicking the "Sing Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
+                
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
+    
